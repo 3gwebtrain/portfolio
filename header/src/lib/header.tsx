@@ -1,14 +1,15 @@
+import { InitialProps } from '@myresume/prop-types';
 import { FC } from 'react';
 import './header.module.less';
 
-const Header: FC = (): JSX.Element => {
+export const Header: FC<{ initials: InitialProps[] }> = ({ initials }) => {
   return (
     <div className="p-5 bg-primary flex justify-between">
-      <h1 className="text-secondary text-5xl font-semibold">B</h1>
-      <h1 className="text-white text-5xl font-semibold">M</h1>
-      <h1 className="text-tertiary text-5xl font-semibold">A</h1>
+      {initials.map((initial) => (
+        <h1 key={initial.label} className={initial.className}>
+          {initial.label}
+        </h1>
+      ))}
     </div>
   );
 };
-
-export { Header };

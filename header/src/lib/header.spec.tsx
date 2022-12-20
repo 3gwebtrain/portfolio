@@ -1,10 +1,12 @@
+import { initialInitialPropsSchema } from '@myresume/prop-types';
 import { render } from '@testing-library/react';
-
-import Header from './header';
+import { Header } from './header';
 
 describe('Header', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Header />);
+    const { baseElement } = render(
+      <Header initials={initialInitialPropsSchema} />
+    );
     expect(baseElement).toBeTruthy();
   });
 });
