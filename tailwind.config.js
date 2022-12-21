@@ -9,7 +9,15 @@ module.exports = {
       __dirname,
       '{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
     ),
+    'header/src/lib/**/*.{js,jsx,ts,tsx}',
     ...createGlobPatternsForDependencies(__dirname),
+  ],
+  safelist: [
+    'text-secondary',
+    'text-white',
+    'text-tertiary',
+    'text-5xl ',
+    'font-semibold',
   ],
   theme: {
     extend: {

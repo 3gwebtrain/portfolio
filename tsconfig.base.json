@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@myresume/header": ["header/src/index.ts"],
+      "@myresume/intro": ["intro/src/index.ts"],
       "@myresume/prop-types": ["prop-types/src/index.ts"]
     }
   },
